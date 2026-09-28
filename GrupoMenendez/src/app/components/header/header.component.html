@@ -1,0 +1,67 @@
+<header
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+  [ngClass]="scrolled ? 'bg-navy shadow-2xl' : 'bg-navy/95'">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a routerLink="/" class="flex-shrink-0">
+        <app-logo></app-logo>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-7">
+        <a *ngFor="let item of navItems" 
+           [routerLink]="item.path"
+           routerLinkActive="text-brand"
+           [routerLinkActiveOptions]="{exact: true}"
+           class="font-display text-[13px] tracking-widest uppercase transition-colors relative group text-gray-300 hover:text-white">
+          {{ item.label }}
+          <span class="absolute -bottom-1 left-0 h-0.5 bg-brand transition-all duration-200 w-0 group-hover:w-full"></span>
+        </a>
+      </nav>
+
+      <!-- CTA + Login -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a routerLink="/login" class="text-gray-400 hover:text-white text-xs font-display tracking-widest uppercase transition-colors cursor-pointer">
+          Login
+        </a>
+        <a routerLink="/contacto" class="bg-brand hover:bg-brand-dark text-white font-display text-xs tracking-widest uppercase px-5 py-3 transition-colors cursor-pointer">
+          Solicitar información
+        </a>
+      </div>
+
+      <!-- Mobile burger -->
+      <button class="lg:hidden text-white p-2" (click)="toggleMenu()" aria-label="Toggle menu">
+        <svg *ngIf="menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+        <svg *ngIf="!menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div *ngIf="menuOpen" class="lg:hidden bg-navy-dark border-t border-white/10">
+    <div class="px-6 py-5 flex flex-col gap-5">
+      <a *ngFor="let item of navItems" 
+         [routerLink]="item.path"
+         (click)="closeMenu()"
+         routerLinkActive="text-brand"
+         [routerLinkActiveOptions]="{exact: true}"
+         class="font-display text-left text-sm tracking-widest uppercase transition-colors text-gray-300">
+        {{ item.label }}
+      </a>
+      
+      <div class="pt-2 border-t border-white/10 flex flex-col gap-3">
+        <a routerLink="/login" (click)="closeMenu()" class="text-gray-400 text-xs font-display tracking-widest uppercase text-left">
+          Login
+        </a>
+        <a routerLink="/contacto" (click)="closeMenu()" class="bg-brand text-white font-display text-xs tracking-widest uppercase px-5 py-3 text-center">
+          Solicitar información
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

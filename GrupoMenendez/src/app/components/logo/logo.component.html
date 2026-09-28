@@ -1,0 +1,15 @@
+<div class="flex items-center gap-3 cursor-pointer select-none">
+  <!-- Reemplazamos el SVG por tu imagen -->
+  <img src="/logo.jpeg" alt="Logo Grupo Menéndez" [style.height.px]="iconSize" class="object-contain" />
+  
+  <div class="flex flex-col leading-none gap-0.5">
+    <span class="font-display font-semibold tracking-[0.18em] leading-none"
+          [ngClass]="[textSize, darkText ? 'text-navy' : 'text-white']">
+      GRUPO
+    </span>
+    <span class="font-display font-semibold tracking-[0.18em] leading-none text-brand"
+          [ngClass]="textSize">
+      MENÉNDEZ
+    </span>
+  </div>
+</div>
