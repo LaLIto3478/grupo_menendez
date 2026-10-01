@@ -167,6 +167,100 @@
   margin-top: 4px;
 }
 
+.purpose-section {
+  background: #1c1f2e;
+  color: #ffffff;
+  padding: 88px 0;
+}
+
+.purpose-section__container {
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 0 24px;
+}
+
+.purpose-section__heading {
+  margin-bottom: 48px;
+}
+
+.purpose-section__eyebrow {
+  color: #fc8703;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  margin: 0 0 12px;
+}
+
+.purpose-section h2 {
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.purpose-grid {
+  align-items: stretch;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.purpose-card {
+  align-items: flex-start;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  display: flex;
+  gap: 24px;
+  min-height: 260px;
+  padding: 40px;
+}
+
+.purpose-card--mission {
+  background: #3d455d;
+}
+
+.purpose-card--vision {
+  background: #4b3022;
+}
+
+.purpose-card__icon {
+  align-items: center;
+  border: 2px solid #fc8703;
+  border-radius: 50%;
+  color: #fc8703;
+  display: flex;
+  flex: 0 0 64px;
+  height: 64px;
+  justify-content: center;
+}
+
+.purpose-card__icon svg {
+  fill: none;
+  height: 34px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5;
+  width: 34px;
+}
+
+.purpose-card h3 {
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+  margin: 2px 0 12px;
+}
+
+.purpose-card p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
 .experience-section {
   background: #f3f4f6;
   padding: 80px 0;
@@ -238,6 +332,23 @@
   .history-section__badge {
     bottom: 16px;
     left: 16px;
+  }
+
+  .purpose-section {
+    padding: 64px 0;
+  }
+
+  .purpose-section__heading {
+    margin-bottom: 36px;
+  }
+
+  .purpose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .purpose-card {
+    min-height: 0;
+    padding: 32px 24px;
   }
 
   .experience-section {
