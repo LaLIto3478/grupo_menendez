@@ -100,4 +100,66 @@
       </div>
     </div>
   </section>
+
+  <section class="projects-section" aria-labelledby="projects-title">
+    <div class="section-container">
+      <div class="section-heading projects-section__heading">
+        <div class="section-kicker">
+          <span></span>
+          <span>Portafolio</span>
+        </div>
+        <h2 id="projects-title">PROYECTOS DESTACADOS</h2>
+      </div>
+
+      <div class="projects-grid">
+        @for (project of projects; track project.title) {
+          <article class="project-card">
+            <div class="project-card__image-wrap">
+              <img [src]="project.image" [alt]="project.title" />
+              <div class="project-card__overlay"></div>
+              <div class="project-card__content">
+                <span>{{ project.category }}</span>
+                <h3>{{ project.title }}</h3>
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="companies-section" aria-labelledby="companies-title">
+    <div class="section-container">
+      <div class="section-heading">
+        <div class="section-kicker section-kicker--center">
+          <span></span>
+          <span>Nuestro grupo</span>
+          <span></span>
+        </div>
+        <h2 id="companies-title">EMPRESAS QUE CONFORMAN EL GRUPO</h2>
+      </div>
+
+      <div class="companies-grid">
+        @for (company of groupCompanies; track company.name) {
+          <article class="company-card">
+            <div class="company-card__logo" aria-hidden="true">{{ company.initials }}</div>
+            <h3>{{ company.name }}</h3>
+            <p>{{ company.description }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-cta" aria-labelledby="cta-title">
+    <div class="contact-cta__overlay"></div>
+    <div class="contact-cta__content">
+      <h2 id="cta-title">¿TIENES UN PROYECTO EN MENTE?</h2>
+      <p>Conoce cómo podemos ayudarte. Nuestro equipo está listo para escucharte.</p>
+      <div class="contact-cta__actions">
+        <a class="button button--primary" routerLink="/contacto">Contáctanos</a>
+        <a class="button button--outline" routerLink="/servicios">Nuestros servicios</a>
+      </div>
+    </div>
+  </section>
 </main>

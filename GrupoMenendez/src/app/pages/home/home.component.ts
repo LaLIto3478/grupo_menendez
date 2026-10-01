@@ -38,4 +38,28 @@ export class HomeComponent {
       image: 'https://images.unsplash.com/photo-1621922688758-359fc864071e?w=600&h=420&fit=crop&auto=format'
     }
   ];
+
+  readonly projects = [
+    {
+      title: 'Proyecto de Infraestructura',
+      category: 'Infraestructura',
+      image: 'https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f?w=800&h=600&fit=crop&auto=format'
+    },
+    {
+      title: 'Obra de Maquinaria Pesada',
+      category: 'Maquinaria',
+      image: 'https://images.unsplash.com/photo-1603814929877-d5d927322656?w=800&h=600&fit=crop&auto=format'
+    },
+    {
+      title: 'Obra Civil',
+      category: 'Construcción',
+      image: 'https://images.unsplash.com/photo-1529792083865-d23889753466?w=800&h=600&fit=crop&auto=format'
+    }
+  ];
+
+  readonly groupCompanies = [
+    { initials: 'DR', name: 'DRECOMEX', description: 'Construcciones' },
+    { initials: 'ME', name: 'MECHNO', description: 'Construcciones M.P.' },
+    { initials: 'RU', name: 'RUIMEN', description: 'Construcciones Ruímen' }
+  ];
 }
