@@ -6,6 +6,11 @@
   background: #ffffff;
 }
 
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
 .principles-hero {
   align-items: flex-end;
   background-image: url('https://images.unsplash.com/photo-1603814744509-57b74d605fc2?w=1920&h=700&fit=crop&auto=format');
@@ -58,6 +63,11 @@
   margin: 0;
 }
 
+
+/* =========================================================
+   INTRODUCCIÓN
+   ========================================================= */
+
 .principles-intro {
   background: #ffffff;
   padding: 64px 24px 56px;
@@ -103,6 +113,11 @@
   line-height: 1.65;
   margin: 0;
 }
+
+
+/* =========================================================
+   GRID DE PRINCIPIOS
+   ========================================================= */
 
 .principles-grid-section {
   background: #ffffff;
@@ -182,7 +197,186 @@
   margin: 0;
 }
 
+
+/* =========================================================
+   NUESTRO COMPROMISO
+   ========================================================= */
+
+.commitment-section {
+  background: #2d3142;
+  padding: 80px 24px;
+}
+
+.commitment-container {
+  margin: 0 auto;
+  max-width: 1120px;
+}
+
+.commitment-grid {
+  align-items: center;
+  display: grid;
+  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+
+/* ---------------------------------------------------------
+   Contenido izquierdo
+   --------------------------------------------------------- */
+
+.commitment-content {
+  max-width: 560px;
+}
+
+.commitment-kicker {
+  align-items: center;
+  color: #fc8703;
+  display: flex;
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  gap: 12px;
+  letter-spacing: 0.25em;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.commitment-kicker span:first-child {
+  background: #fc8703;
+  display: block;
+  height: 2px;
+  width: 40px;
+}
+
+.commitment-content h2 {
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 24px;
+}
+
+.commitment-content p {
+  color: #d1d5db;
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0 0 20px;
+}
+
+.commitment-content p:last-of-type {
+  margin-bottom: 32px;
+}
+
+
+/* ---------------------------------------------------------
+   Botón
+   --------------------------------------------------------- */
+
+.commitment-button {
+  align-items: center;
+  background: #fc8703;
+  color: #ffffff;
+  display: inline-flex;
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  justify-content: center;
+  letter-spacing: 0.15em;
+  min-height: 52px;
+  padding: 0 32px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.commitment-button:hover {
+  background: #d96f00;
+  transform: translateY(-2px);
+}
+
+.commitment-button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+
+/* ---------------------------------------------------------
+   Tarjetas de indicadores
+   --------------------------------------------------------- */
+
+.commitment-stats {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.commitment-stat {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 28px 20px;
+  text-align: center;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.commitment-stat:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(252, 135, 3, 0.45);
+  transform: translateY(-3px);
+}
+
+.commitment-stat__icon {
+  font-size: 32px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.commitment-stat__name {
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.commitment-stat__value {
+  color: #9ca3af;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .commitment-grid {
+    gap: 40px;
+    grid-template-columns: 1fr;
+  }
+
+  .commitment-content {
+    max-width: 720px;
+  }
+
+  .commitment-stats {
+    max-width: 720px;
+  }
+}
+
+
+/* =========================================================
+   TABLET PEQUEÑA
+   ========================================================= */
+
 @media (max-width: 700px) {
+
   .principles-hero {
     min-height: 280px;
     padding: 80px 24px 32px;
@@ -204,10 +398,48 @@
     min-height: 0;
     padding: 28px 20px;
   }
+
+  .commitment-section {
+    padding: 64px 24px;
+  }
+
+  .commitment-content h2 {
+    font-size: 34px;
+  }
 }
 
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
 @media (max-width: 430px) {
+
   .principles-grid {
     grid-template-columns: 1fr;
+  }
+
+  .commitment-section {
+    padding: 56px 20px;
+  }
+
+  .commitment-grid {
+    gap: 36px;
+  }
+
+  .commitment-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .commitment-stat {
+    padding: 24px 20px;
+  }
+
+  .commitment-content h2 {
+    font-size: 30px;
+  }
+
+  .commitment-button {
+    width: 100%;
   }
 }
