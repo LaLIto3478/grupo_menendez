@@ -119,6 +119,37 @@
           <span>Empresas del grupo</span>
         </article>
       </div>
+      
+            <!-- Valores -->
+      <section class="values-section" aria-labelledby="values-title">
+        <div class="values-section__container">
+
+          <div class="section-heading">
+            <div class="section-kicker section-kicker--center">
+              <span aria-hidden="true"></span>
+              <span>Cultura</span>
+              <span aria-hidden="true"></span>
+            </div>
+
+            <h2 id="values-title">NUESTROS VALORES</h2>
+          </div>
+
+          <div class="values-grid">
+            <article class="value-card" *ngFor="let value of valores">
+              <div class="value-card__icon">
+                {{ value.icon }}
+              </div>
+
+              <h3>{{ value.title }}</h3>
+
+              <p>{{ value.desc }}</p>
+            </article>
+          </div>
+
+        </div>
+      </section>
+      
+      
     </div>
   </section>
 </main>
