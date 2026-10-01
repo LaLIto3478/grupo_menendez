@@ -20,15 +20,9 @@
         </a>
       </nav>
 
-      <!-- CTA + Login -->
-      <div class="hidden lg:flex items-center gap-4">
-        <a routerLink="/login" class="text-gray-400 hover:text-white text-xs font-display tracking-widest uppercase transition-colors cursor-pointer">
-          Login
-        </a>
-        <a routerLink="/contacto" class="bg-brand hover:bg-brand-dark text-white font-display text-xs tracking-widest uppercase px-5 py-3 transition-colors cursor-pointer">
-          Solicitar información
-        </a>
-      </div>
+      <a routerLink="/contacto" class="hidden lg:block bg-brand hover:bg-brand-dark text-white font-display text-xs tracking-widest uppercase px-5 py-3 transition-colors cursor-pointer">
+        Solicitar información
+      </a>
 
       <!-- Mobile burger -->
       <button class="lg:hidden text-white p-2" (click)="toggleMenu()" aria-label="Toggle menu">
@@ -53,15 +47,10 @@
          class="font-display text-left text-sm tracking-widest uppercase transition-colors text-gray-300">
         {{ item.label }}
       </a>
-      
-      <div class="pt-2 border-t border-white/10 flex flex-col gap-3">
-        <a routerLink="/login" (click)="closeMenu()" class="text-gray-400 text-xs font-display tracking-widest uppercase text-left">
-          Login
-        </a>
-        <a routerLink="/contacto" (click)="closeMenu()" class="bg-brand text-white font-display text-xs tracking-widest uppercase px-5 py-3 text-center">
-          Solicitar información
-        </a>
-      </div>
+
+      <a routerLink="/contacto" (click)="closeMenu()" class="bg-brand text-white font-display text-xs tracking-widest uppercase px-5 py-3 text-center">
+        Solicitar información
+      </a>
     </div>
   </div>
 </header>

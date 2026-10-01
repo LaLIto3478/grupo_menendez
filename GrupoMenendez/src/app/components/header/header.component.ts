@@ -18,8 +18,7 @@ export class HeaderComponent {
     { label: 'Conócenos', path: '/conocenos' },
     { label: 'Principios', path: '/principios' },
     { label: 'Servicios', path: '/servicios' },
-    { label: 'Galería', path: '/galeria' },
-    { label: 'Contacto', path: '/contacto' }
+    { label: 'Galería', path: '/galeria' }
   ];
 
   @HostListener('window:scroll', [])

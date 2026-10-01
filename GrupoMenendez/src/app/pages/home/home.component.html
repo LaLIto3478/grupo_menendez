@@ -33,4 +33,71 @@
       </div>
     }
   </section>
+
+  <section class="about-section" aria-labelledby="about-title">
+    <div class="section-container about-section__grid">
+      <div class="about-section__content">
+        <div class="section-kicker">
+          <span></span>
+          <span>Conócenos</span>
+        </div>
+        <h2 id="about-title">¿QUIÉNES SOMOS?</h2>
+        <p>
+          Somos una empresa dedicada a la construcción de proyectos de obra hidráulica y obra civil. Tenemos equipo, maquinaria y transporte para atender clientes en proyectos de infraestructura de pequeña y mediana complejidad.
+        </p>
+        <p>
+          Nos dedicamos a la construcción de obras gubernamentales y privadas, satisfaciendo a nuestros clientes por medio de la exigencia en el control de calidad de nuestros productos terminados.
+        </p>
+        <a class="button button--navy" routerLink="/conocenos">
+          Conocer más
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="about-section__image-wrap">
+        <div class="about-section__frame" aria-hidden="true"></div>
+        <img
+          src="https://images.unsplash.com/photo-1575281923032-f40d94ef6160?w=900&h=700&fit=crop&auto=format"
+          alt="Equipo de construcción de Grupo Menéndez"
+        />
+        <span class="about-section__badge">+25 años de experiencia</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section" aria-labelledby="services-title">
+    <div class="section-container">
+      <div class="section-heading">
+        <div class="section-kicker section-kicker--center">
+          <span></span>
+          <span>Lo que hacemos</span>
+          <span></span>
+        </div>
+        <h2 id="services-title">NUESTROS SERVICIOS</h2>
+      </div>
+
+      <div class="services-grid">
+        @for (service of services; track service.title) {
+          <a class="service-card" routerLink="/servicios">
+            <div class="service-card__image-wrap">
+              <img [src]="service.image" [alt]="service.title" />
+              <span class="service-card__image-overlay" aria-hidden="true"></span>
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__rule" aria-hidden="true"></span>
+              <h3>{{ service.title }}</h3>
+              <p>{{ service.description }}</p>
+              <span class="service-card__link">
+                Ver servicio <span aria-hidden="true">→</span>
+              </span>
+            </div>
+          </a>
+        }
+      </div>
+
+      <div class="services-section__footer">
+        <a class="button button--outline-navy" routerLink="/servicios">Ver todos los servicios</a>
+      </div>
+    </div>
+  </section>
 </main>
